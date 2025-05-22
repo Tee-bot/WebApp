@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Detection</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 80px; }
+        input[type=text] { width: 60%; padding: 10px; font-size: 16px; }
+        input[type=submit] { padding: 10px 20px; font-size: 16px; margin-top: 10px; }
+        .result { margin-top: 30px; font-size: 24px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Phishing Website Detector 🔍</h1>
+    <form method="post">
+        <input type="text" name="url" placeholder="Enter a website URL" required><br>
+        <input type="submit" value="Check URL">
+    </form>
+    {% if prediction %}
+        <div class="result">{{ prediction }}</div>
+    {% endif %}
+</body>
+</html>
